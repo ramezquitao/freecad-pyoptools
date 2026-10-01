@@ -106,3 +106,8 @@ ENV/
 .mypy_cache/
 *.FCStd
 *.FCBak
+
+# Test artifacts (extracted FreeCAD AppImage and pytest cache)
+tests/.freecad/
+.pytest_cache/
+tests/squashfs-root/

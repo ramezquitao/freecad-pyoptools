@@ -1,0 +1,10 @@
+# No runtime dependencies.
+#
+# The test suite uses the Python standard library `unittest` and FreeCAD's
+# `Test` runner, so it needs no third-party test dependency.
+#
+# Level 1 (tests/unit) runs with the system Python:
+#     python3 -m unittest discover -s tests/unit -t . -v
+#
+# Levels 2 and 3 (tests/smoke, tests/integration) run inside FreeCAD's bundled
+# interpreter. See the "Testing" section in README.md.

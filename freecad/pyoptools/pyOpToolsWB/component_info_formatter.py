@@ -161,12 +161,12 @@ class ComponentInfoFormatter:
             unit = self._get_unit(key)
             return f"{formatted} {unit}" if unit else formatted
         
+        elif isinstance(value, bool):
+            return "Yes" if value else "No"
+        
         elif isinstance(value, int):
             unit = self._get_unit(key)
             return f"{value} {unit}" if unit else str(value)
-        
-        elif isinstance(value, bool):
-            return "Yes" if value else "No"
         
         elif value is None:
             return "N/A"
