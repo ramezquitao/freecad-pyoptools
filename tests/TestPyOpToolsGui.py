@@ -38,6 +38,7 @@ from gui.test_pyoptools_repr import (  # noqa: E402
     WavelengthUnitsRepr,
 )
 from gui.test_component_creation import ComponentCreationContract  # noqa: E402
+from gui.test_panels import LightSourcesPanelGui, SensorsPanelGui  # noqa: E402
 
 _ = (
     ViewObjectAvailability,
@@ -52,4 +53,6 @@ _ = (
     RaySourceRepr,
     WavelengthUnitsRepr,
     ComponentCreationContract,
+    SensorsPanelGui,
+    LightSourcesPanelGui,
 )

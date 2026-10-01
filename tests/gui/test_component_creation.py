@@ -131,6 +131,21 @@ class ComponentCreationContract(PyOpToolsGuiTestCaseDoc):
         obj = InsertRPoint(enabled=False, ID="RPT_OFF")
         self.assertIs(obj.Enabled, False)
 
+    # KNOWN BROKEN (pinned for the refactor). WBPart.pyoptools_repr prints
+    # ``self.pyOpToolsType``, an attribute that does not exist, so calling it
+    # raises AttributeError. REFACTOR_PLAN step 1.3a fixes it to report
+    # ``obj.ComponentType``. The @expectedFailure decorator must be REMOVED in
+    # the SAME commit as that fix, at which point this test asserts the
+    # corrected behaviour.
+    @unittest.expectedFailure
+    def test_base_pyoptools_repr_does_not_raise(self):
+        class _MinimalPart(WBPart):
+            CURRENT_PART_VERSION = 0
+
+        obj = self.doc.addObject("Part::FeaturePython", "BASE_REPR")
+        _MinimalPart(obj, "BaseThing")
+        obj.Proxy.pyoptools_repr(obj)  # must not raise AttributeError
+
 
 if __name__ == "__main__":
     unittest.main()

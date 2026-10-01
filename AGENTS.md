@@ -42,6 +42,20 @@ users should read [`README.md`](README.md).
   and `RaysArrayPart`): a disabled point source still yields rays. This is
   pinned in `tests/gui/test_pyoptools_repr.py`. If you fix it, update that test
   in the same commit.
+- **`WBPart.pyoptools_repr` (base fallback) is broken:** it references
+  `self.pyOpToolsType`, which does not exist, so it raises `AttributeError`.
+  `tests/gui/test_component_creation.py::test_base_pyoptools_repr_does_not_raise`
+  pins this with `@unittest.expectedFailure`. When REFACTOR_PLAN step 1.3a
+  fixes it to use `obj.ComponentType`, remove the decorator in the same commit.
+
+## Panels
+
+- `SensorsPanel` and `LightSourcesPanel` are the target of REFACTOR_PLAN step
+  4.1 (shared `ComponentListPanel` base). Their behaviour is pinned in
+  `tests/gui/test_panels.py`: per-panel filter, `Enabled` state, enable/disable
+  all, wavelength extraction and icon generation. **Keep the `objectName`s**
+  (`PyOpTools_SensorsPanel`, `PyOpTools_LightSourcesPanel`); FreeCAD restores
+  the dock layout by them.
 
 ## Production code
 

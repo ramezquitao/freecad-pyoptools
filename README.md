@@ -32,7 +32,7 @@ The test suite has four levels (see `tests/`):
 | 1 | `unit` | No (system `python3`) | No | Pure-Python logic (e.g. `ComponentInfoFormatter`) |
 | 2 | `smoke` | Yes (headless) | No | Imports of every module, `WBPart` versioning contract |
 | 3 | `integration` | Yes (headless) | No | Material resolution, Placement conversion, ray propagation |
-| 4 | `gui` | Yes (GUI) | Yes (Xvfb) | Real component creation + versioning contract, real `ViewObject` (transparency, shape colours), `pyoptools_repr` conversion for every component |
+| 4 | `gui` | Yes (GUI) | Yes (Xvfb) | Real component creation + versioning contract, real `ViewObject` (transparency, shape colours), `pyoptools_repr` conversion for every component, Sensors/Light Sources panels |
 
 Following the FreeCAD convention (as used by the bundled workbenches, e.g.
 Draft, with `TestDraft` / `TestDraftGui`), the tests use the standard library
