@@ -19,6 +19,10 @@ After that you just select the "pyOpTools" workbench in FreeCAD in the usual way
 
 For information on testing local pyoptools library changes in FreeCAD, see the [Development Guide](docs/DEVELOPMENT.md).
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, the test suite,
+and the pull-request workflow. AI coding assistants should also read
+[AGENTS.md](AGENTS.md).
+
 ## Testing
 
 The test suite has four levels (see `tests/`):
