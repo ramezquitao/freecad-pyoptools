@@ -2,7 +2,6 @@
 """Classes used to define a point source."""
 
 import FreeCAD
-import FreeCADGui
 import Part
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget

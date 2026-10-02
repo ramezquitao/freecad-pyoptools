@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Classes used to define a light sensor."""
 import FreeCAD
-import FreeCADGui
 from .feedback import FeedbackHelper
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget

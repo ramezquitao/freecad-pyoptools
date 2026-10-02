@@ -183,11 +183,6 @@ class LightSourcesPanel(QtWidgets.QDockWidget):
         painter.end()
         return QtGui.QIcon(pixmap)
     
-    def get_icon_for_type(self, component_type):
-        """Get icon for a specific component type."""
-        # Legacy method - no longer used since icons are per-object
-        return QtGui.QIcon()
-    
     def setup_observers(self):
         """Set up observers to auto-refresh when document changes."""
         # Connect to FreeCAD's selection observer
@@ -475,13 +470,13 @@ class LightSourcesPanel(QtWidgets.QDockWidget):
         if hasattr(Gui, 'Selection'):
             try:
                 Gui.Selection.removeObserver(self)
-            except:
+            except Exception:
                 pass
         
         # Remove document observer
         try:
             FreeCAD.removeDocumentObserver(self)
-        except:
+        except Exception:
             pass
         
         super().closeEvent(event)

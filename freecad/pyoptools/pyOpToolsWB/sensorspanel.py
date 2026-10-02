@@ -349,13 +349,13 @@ class SensorsPanel(QtWidgets.QDockWidget):
         if hasattr(Gui, 'Selection'):
             try:
                 Gui.Selection.removeObserver(self)
-            except:
+            except Exception:
                 pass
         
         # Remove document observer
         try:
             FreeCAD.removeDocumentObserver(self)
-        except:
+        except Exception:
             pass
         
         super().closeEvent(event)

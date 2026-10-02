@@ -2,7 +2,6 @@
 """Classes used to define an array of rays."""
 
 import FreeCAD
-import FreeCADGui
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget
 from .feedback import FeedbackHelper

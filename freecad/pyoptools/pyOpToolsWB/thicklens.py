@@ -5,10 +5,8 @@ import FreeCAD
 import FreeCADGui
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget
-from freecad.pyoptools.pyOpToolsWB.pyoptoolshelpers import getMaterial
 from .feedback import FeedbackHelper
 
-import pyoptools.raytrace.comp_lib as comp_lib
 import pyoptools.raytrace.mat_lib as matlib
 from pyoptools.raytrace.system.idealcomponent import IdealThickLens
 from pyoptools.raytrace.shape.circular import Circular

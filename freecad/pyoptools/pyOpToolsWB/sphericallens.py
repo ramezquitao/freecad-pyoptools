@@ -2,7 +2,6 @@
 """Classes used to define a Spherical lens."""
 
 import FreeCAD
-import FreeCADGui
 import Part
 
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
@@ -108,6 +107,16 @@ class SphericalLensPart(WBPart):
     -----
     A biconvex lens is created with positive CurvatureFront and negative CurvatureBack.
     A curvature of 0 creates a flat surface.
+
+    Version History:
+    --------------
+    Version 1:
+        - Renamed properties to descriptive names: `CS1`→`CurvatureFront`,
+          `CS2`→`CurvatureBack`, `Thk`→`CenterThickness`, `D`→`Diameter`,
+          `matcat`→`MaterialCatalog`, `matref`→`MaterialReference`
+          (see `migrate_to_v1`).
+    Version 0:
+        - Initial version with short property names.
     """
 
     CURRENT_PART_VERSION = 1

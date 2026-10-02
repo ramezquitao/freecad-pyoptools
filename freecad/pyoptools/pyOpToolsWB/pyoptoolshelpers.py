@@ -2,7 +2,7 @@
 import FreeCAD
 from pyoptools.raytrace.system import System
 from freecad.pyoptools.pyOpToolsWB.qthelpers import outputDialog
-from math import radians, degrees, cos, atan2, asin, pi
+from math import radians, cos, atan2, asin, pi
 from numpy.linalg import inv
 import pyoptools.raytrace.mat_lib as matlib
 

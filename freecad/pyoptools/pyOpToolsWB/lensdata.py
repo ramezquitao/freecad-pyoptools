@@ -2,19 +2,14 @@
 """Classes used to define a lens from a data list."""
 
 import FreeCAD
-import FreeCADGui
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget
 from .feedback import FeedbackHelper
 
-import Part
-
 import pyoptools.raytrace.comp_lib as comp_lib
 from freecad.pyoptools.pyOpToolsWB.widgets.materialWidget import materialWidget
 
-import pyoptools.raytrace.mat_lib as matlib
 from math import radians
-from freecad.pyoptools import ICONPATH
 from PySide import QtWidgets
 from PySide.QtCore import QLocale
 

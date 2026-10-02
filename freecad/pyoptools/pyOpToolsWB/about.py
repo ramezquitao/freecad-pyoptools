@@ -2,7 +2,6 @@
 """About dialog for the pyOpTools workbench."""
 
 import os
-import FreeCAD
 import FreeCADGui
 from PySide import QtWidgets, QtGui
 

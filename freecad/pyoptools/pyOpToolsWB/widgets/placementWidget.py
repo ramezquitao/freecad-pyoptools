@@ -7,9 +7,6 @@ import Part
 import math
 
 
-# Legacy classes removed - now using modern SelectionObserver pattern from selectionhelpers.py
-
-
 def isLine(edge):
     """Check if edge is a straight line."""
     if not hasattr(edge, "Curve"):
@@ -46,9 +43,6 @@ def isValidFaceForCapture(face):
         return True
     
     return False
-
-
-# EventLogger class removed - no longer needed with SelectionObserver pattern
 
 
 class placementWidget(QtWidgets.QWidget):

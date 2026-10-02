@@ -4,8 +4,6 @@ from .pyopPlot import *
 
 #TODO: Plot no esta funcionando en Freecad 18 ni 19. Se inhabilita 
 
-from .propagate import PropagatePart
-
 class ReportsMenu:
     def __init__(self):
         #Esta no tiene GUI, no necesitamos heredar de WBCommandMenu

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Classes used to define a doveprism."""
 import FreeCAD
-import FreeCADGui
 import Part
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from .feedback import FeedbackHelper

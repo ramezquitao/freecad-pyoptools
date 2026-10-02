@@ -2,7 +2,6 @@
 """Classes used to define a round mirror."""
 
 import FreeCAD
-import FreeCADGui
 import Part
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from .feedback import FeedbackHelper
@@ -89,6 +88,10 @@ class RoundMirrorPart(WBPart):
 
     Version History:
     --------------
+    Version 2:
+        - Added `WedgeAngle` property (App::PropertyAngle). `migrate_to_v2`
+          adds it with default 0.0 (parallel faces, original behavior
+          preserved).
     Version 1:
         - Added FilterType property.
         - The dynamically generated: CutoffWavelength, LowerCutoffWavelength,

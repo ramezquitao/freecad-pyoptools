@@ -1,5 +1,5 @@
 import FreeCAD
-from PySide import QtCore, QtGui, QtWidgets
+from PySide import QtCore, QtWidgets
 import os
 
 

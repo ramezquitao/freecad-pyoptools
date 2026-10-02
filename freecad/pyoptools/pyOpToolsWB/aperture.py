@@ -4,7 +4,6 @@ from .feedback import FeedbackHelper
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget
 import FreeCAD
-import FreeCADGui
 import Part
 from FreeCAD import Units
 

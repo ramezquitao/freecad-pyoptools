@@ -5,7 +5,7 @@
 import FreeCAD
 import FreeCADGui
 from freecad.pyoptools.pyOpToolsWB.qthelpers import getUIFilePath
-from PySide import QtGui, QtWidgets
+from PySide import QtWidgets
 
 from .wbpart import WBPart
 from .feedback import FeedbackHelper
@@ -110,7 +110,7 @@ class WBCommandMenu:
         self.gui = gui
 
     def IsActive(self):
-        if FreeCAD.ActiveDocument == None:
+        if FreeCAD.ActiveDocument is None:
             return False
         else:
             return True
@@ -156,7 +156,7 @@ class WBCommandMenu:
                 if hasattr(self, "GetResources"):
                     resources = self.GetResources()
                     component_name = resources.get("MenuText", "Component")
-            except:
+            except Exception:
                 pass
 
             FeedbackHelper.show_error_dialog(

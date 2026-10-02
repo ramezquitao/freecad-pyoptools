@@ -11,6 +11,7 @@ Implements requirements from Story 1.6: Add Visual Feedback System
 
 from PySide import QtCore, QtWidgets
 import FreeCAD
+import FreeCADGui
 import functools
 
 
@@ -226,24 +227,17 @@ class FeedbackHelper:
                     # Handle post-operation tasks based on operation type
                     if operation == "creation":
                         # Component creation: recompute, update GUI, and close dialog
-                        import FreeCAD
-                        import FreeCADGui
-
                         FreeCAD.ActiveDocument.recompute()
                         FreeCADGui.updateGui()
                         FreeCADGui.Control.closeDialog()
 
                     elif operation == "execution":
                         # Other operations: update GUI and close dialog (no recompute)
-                        import FreeCADGui
-
                         FreeCADGui.updateGui()
                         FreeCADGui.Control.closeDialog()
 
                     elif operation == "persistent":
                         # Persistent panel operations: update GUI but keep panel open
-                        import FreeCADGui
-
                         FreeCADGui.updateGui()
                         # Note: Dialog stays open for multiple runs
 

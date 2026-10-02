@@ -2,7 +2,6 @@
 """Classes used to define a SimpleDMD (Digital Micromirror Device)."""
 
 import FreeCAD
-import FreeCADGui
 import Part
 import os
 
@@ -126,6 +125,19 @@ class SimpleDMDPart(WBPart):
       (our ON direction = TI OFF direction, our OFF direction = TI ON direction).
       Current values (ON=270°, OFF=180°) are set to match observed sample behavior.
       This discrepancy needs verification and may require correction.
+
+    Version History:
+    --------------
+    Version 1:
+        - Initial version. This component was versioned as v1 from its first
+          commit (`eb89ff4`, which hardcoded `obj.ObjectVersion = 1` in the
+          constructor; `b0050f4` later moved it to the formal
+          `CURRENT_PART_VERSION` mechanism without schema change). No v0 was
+          ever committed, so no saved documents can exist without
+          `ObjectVersion`, and no `migrate_to_v1` is ever needed. When
+          migrating to v2, only the v1→v2 transition needs handling (keep the
+          `ObjectVersion < N` guard pattern for uniformity with other
+          components).
     """
 
     CURRENT_PART_VERSION = 1
@@ -303,7 +315,8 @@ class SimpleDMDPart(WBPart):
         # Call base class migration if needed
         WBPart.onDocumentRestored(self, obj)
 
-        # No migration needed for ObjectVersion=1 (initial version)
+        # v1 is the initial version; add migrate_to_v2 here when
+        # CURRENT_PART_VERSION becomes 2.
 
 
 def InsertSimpleDMD(

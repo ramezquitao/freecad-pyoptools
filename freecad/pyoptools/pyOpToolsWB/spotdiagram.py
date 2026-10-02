@@ -15,8 +15,6 @@ except ImportError:
     except ImportError:
         Plot = None
 
-from .propagate import PropagatePart
-
 class SpotDiagramMenu:
     def __init__(self):
         #Esta no tiene GUI, no necesitamos heredar de WBCommandMenu

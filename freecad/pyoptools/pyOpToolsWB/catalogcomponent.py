@@ -2,7 +2,6 @@
 """Classes used to define a component from different catalogs."""
 
 import FreeCAD
-import FreeCADGui
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from .feedback import FeedbackHelper
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import placementWidget

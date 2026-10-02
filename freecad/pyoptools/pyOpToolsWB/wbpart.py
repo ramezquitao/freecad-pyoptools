@@ -235,7 +235,7 @@ class WBPart:
 
     def pyoptools_repr(self, obj):
         print(
-            f"pyOpTools representation of Object {self.pyOpToolsType} not implemented"
+            f"pyOpTools representation of Object {obj.ComponentType} not implemented"
         )
 
 

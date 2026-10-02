@@ -25,7 +25,6 @@
 #***************************************************************************
 
 from PySide import QtCore, QtWidgets
-from distutils.version import LooseVersion as V
 
 #import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas

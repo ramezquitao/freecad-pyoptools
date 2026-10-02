@@ -1,22 +1,17 @@
 # -*- coding: utf-8 -*-
 import FreeCAD, Part
 
-from math import radians
-from .wbcommand import *
+from .wbpart import WBPart
 from .pyoptoolshelpers import getActiveSystem
 from .feedback import FeedbackHelper
 
-from pyoptools.raytrace.system import System
-
 from pyoptools.misc.pmisc.misc import wavelength2RGB
-from pyoptools.raytrace.calc import parallel_propagate
 
 
 def _has_forward_incompatible_objects():
     """Check if the active document contains any forward-incompatible objects."""
     if FreeCAD.ActiveDocument is None:
         return False
-    from freecad.pyoptools.pyOpToolsWB.wbpart import WBPart
 
     for obj in FreeCAD.ActiveDocument.Objects:
         # Skip objects that don't belong to pyoptools (same filter used across codebase)
@@ -79,7 +74,7 @@ class PropagateMenu:
         Returns:
             bool: True if document exists with ray sources, False otherwise
         """
-        if FreeCAD.ActiveDocument == None:
+        if FreeCAD.ActiveDocument is None:
             return False
         
         # Check if any ray sources exist (RaysPoint, RaysPar, RaysArray, Ray)

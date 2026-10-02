@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """Classes used to define a powell lens."""
 import FreeCAD
-import FreeCADGui
 from .wbcommand import WBCommandGUI, WBCommandMenu, WBPart
 from freecad.pyoptools.pyOpToolsWB.widgets.placementWidget import (
     placementWidget,
